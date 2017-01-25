@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const compression = require('compression');
 
 // If an incoming request uses
 // a protocol other than HTTPS,
@@ -14,6 +15,9 @@ const forceSSL = function() {
     next();
   }
 }
+
+// Gzip
+app.use(compression());
 
 // Instruct the app
 // to use the forceSSL
