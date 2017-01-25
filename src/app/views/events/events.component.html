@@ -1,0 +1,16 @@
+<div class="events">
+  <h1>All events</h1>
+  <p class="lead">Complete list of all events for today</p>
+  <div class="row">
+    <div class="col-lg-12 ">
+      <ul class="nav nav-pills">
+        <li *ngFor="let sport of sports" role="presentation" [ngClass]="{'active': currentSport == sport}">
+          <a (click)="setCurrentSport(sport)" >{{sport.name}}<span class="badge">{{sport.events}}</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <st-box-sport *ngIf="currentSport != null" [sport]="currentSport"></st-box-sport>
+  </div>
+</div>

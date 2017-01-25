@@ -1,0 +1,31 @@
+    @import "../../../assets/scss/_variables.scss";
+    .events {
+        a {
+            cursor: pointer;
+        }
+        .nav {
+            margin-bottom: 20px;
+            li {
+                a {
+                    line-height: 1;
+                    padding: 6px 8px;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    font-size: 16px;
+                    &:hover {
+                        background-color: $header-color;
+                    }
+                    .badge {
+                        margin-left: 5px;
+                        background-color: #FFF;
+                        color: #000;
+                    }
+                }
+            }
+            li.active {
+                a {
+                    background-color: $header-color;
+                }
+            }
+        }
+    }

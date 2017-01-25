@@ -1,0 +1,11 @@
+<div class="channels">
+  <h1>Channels</h1>
+  <p class="lead">Complete list of all channels</p>
+  <div class="row">
+    <div class="col-lg-12 ">
+      <div class="list-group">
+        <button *ngFor="let channel of channels" type="button" (click)="goToChannel(channel)" class="list-group-item" [innerHtml]="'Channel ' + channel"></button>
+      </div>
+    </div>
+  </div>
+</div>

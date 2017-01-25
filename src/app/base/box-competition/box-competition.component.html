@@ -1,0 +1,10 @@
+<div class="box-competition panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title" [innerHtml]="competition.name"></h3>
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+      <st-box-event *ngFor="let event of competition.events" [event]="event"></st-box-event>
+    </div>
+  </div>
+</div>
