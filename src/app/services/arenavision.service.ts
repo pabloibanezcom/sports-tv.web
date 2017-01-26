@@ -9,7 +9,8 @@ export class ArenavisionService {
   private arenavision_url: string;
 
   constructor(private http: Http) {
-    this.api_url = 'https://sports-tv-api.herokuapp.com/api/';
+    // this.api_url = 'https://sports-tv-api.herokuapp.com/api/';
+    this.api_url = 'http://localhost:3000/api/';
     this.arenavision_url = '';
   }
 

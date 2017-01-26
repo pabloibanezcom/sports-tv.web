@@ -1,0 +1,11 @@
+.team-show {
+    display: inline-block;
+    .team-logo {
+        width: 48px;
+    }
+    .team-name {
+        padding: 30px 0;
+        color: #555555;
+        text-transform: uppercase;
+    }
+}

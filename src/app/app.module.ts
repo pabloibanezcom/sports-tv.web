@@ -12,6 +12,8 @@ import { BoxSportComponent } from './base/box-sport/box-sport.component';
 import { BoxCompetitionComponent } from './base/box-competition/box-competition.component';
 import { BoxEventComponent } from './base/box-event/box-event.component';
 import { ChannelsComponent } from './views/channels/channels.component';
+import { TeamShowComponent } from './base/team-show/team-show.component';
+import { DefaultImageDirective } from './directives/default-image.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ChannelsComponent } from './views/channels/channels.component';
     BoxSportComponent,
     BoxCompetitionComponent,
     BoxEventComponent,
-    ChannelsComponent
+    ChannelsComponent,
+    TeamShowComponent,
+    DefaultImageDirective
   ],
   imports: [
     BrowserModule,

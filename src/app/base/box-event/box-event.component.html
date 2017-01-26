@@ -1,9 +1,19 @@
 <div class="box-event list-group-item">
-  <h4 class="list-group-item-heading" [innerHtml]="event.name"></h4>
-  <p class="list-group-item-text">
-    <span [innerHtml]="event.date | date:'EEE dd - HH:mm'"></span>
-    <a *ngFor="let channel of event.channels" (click)="goToChannel(channel.number)">{{'Channel ' + channel.number}} 
-      <span class="badge" [innerHtml]="channel.language"></span>
-      </a>
+  <div *ngIf="!event.teams" class="list-group-item-heading" [innerHtml]="event.name">
+  </div>
+  <div class="event-header row" *ngIf="event.teams" (click)="showChannels = !showChannels">
+    <div class="col-xs-5 team-show-container">
+      <st-team-show [team]="event.teams.team1"></st-team-show>
+    </div>
+    <div class="col-xs-2 event-time"><span [innerHtml]="event.date | date:'HH:mm'"></span></div>
+    <div class="col-xs-5 team-show-container">
+      <st-team-show [team]="event.teams.team2" away="true"></st-team-show>
+    </div>
+  </div>
+  <p *ngIf="showChannels" class="list-group-item-text channels">
+    <a class="btn btn-primary btn-sm channel" *ngFor="let channel of event.channels" (click)="goToChannel(channel.number)"><img class="mr5" src="../../../assets/images/languages/{{channel.language}}.png" />
+    {{'Channel ' + channel.number}} 
+      <i class="fa fa-play ml5"></i>
+    </a>
   </p>
 </div>
