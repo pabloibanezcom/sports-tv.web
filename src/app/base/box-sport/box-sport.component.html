@@ -1,5 +1,5 @@
 <div class="box-sport">
-  <div class="col-lg-6" *ngFor="let competition of sport.competitions">
+  <div class="col-lg-6" *ngFor="let competition of sport.competitions | orderBy: 'order' ">
     <st-box-competition [competition]="competition"></st-box-competition>
   </div>
 </div>

@@ -14,6 +14,8 @@ import { BoxEventComponent } from './base/box-event/box-event.component';
 import { ChannelsComponent } from './views/channels/channels.component';
 import { TeamShowComponent } from './base/team-show/team-show.component';
 import { DefaultImageDirective } from './directives/default-image.directive';
+import { OptionalImageContainerComponent } from './base/optional-image-container/optional-image-container.component';
+import { OrderByPipe } from './pipes/order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DefaultImageDirective } from './directives/default-image.directive';
     BoxEventComponent,
     ChannelsComponent,
     TeamShowComponent,
-    DefaultImageDirective
+    DefaultImageDirective,
+    OptionalImageContainerComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,

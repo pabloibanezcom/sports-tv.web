@@ -7,8 +7,14 @@
     .event-header {
         margin: 0;
         cursor: pointer;
+        font-size: 12px;
         &:hover {
             background-color: #eeeeee;
+        }
+        .event-time {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #555555;
         }
     }
     .team-show-container {
@@ -16,11 +22,6 @@
     }
     a {
         cursor: pointer;
-    }
-    .event-time {
-        padding: 20px 0;
-        font-size: 18px;
-        color: #555555;
     }
     .channels {
         padding: 15px 10px;

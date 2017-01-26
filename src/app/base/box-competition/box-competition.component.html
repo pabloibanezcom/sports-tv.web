@@ -1,6 +1,8 @@
 <div class="box-competition panel panel-primary">
   <div class="panel-heading">
+    <st-optional-image-container class="flag" [conditional]="competition.country" [imgSrc]="flagSrc"></st-optional-image-container>
     <h3 class="panel-title" [innerHtml]="competition.name"></h3>
+    <st-optional-image-container class="logo" [conditional]="competition.key" [imgSrc]="logoSrc"></st-optional-image-container>
   </div>
   <div class="panel-body">
     <div class="list-group">
