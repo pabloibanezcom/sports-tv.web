@@ -1,7 +1,8 @@
 <div *ngIf="team" class="team-show" [ngClass]="{'pull-right': !away, 'pull-left': away}">
   <span *ngIf="!away" class="team-name" [ngClass]="{'no-logo': !team.key}" [innerHtml]="team.name"></span>
-  <div class="team-logo">
+  <div class="team-logo" [ngClass]="{'logo-home': !away, 'logo-away': away}">
     <img *ngIf="team.key" [src]="logoUrl" (error)="updateUrl($event)" />
   </div>
   <span *ngIf="away" class="team-name" [ngClass]="{'no-logo': !team.key}" [innerHtml]="team.name"></span>
+  <div class="clearfix"></div>
 </div>

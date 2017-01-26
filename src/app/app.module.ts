@@ -16,6 +16,7 @@ import { TeamShowComponent } from './base/team-show/team-show.component';
 import { DefaultImageDirective } from './directives/default-image.directive';
 import { OptionalImageContainerComponent } from './base/optional-image-container/optional-image-container.component';
 import { OrderByPipe } from './pipes/order-by.pipe';
+import { DayShowComponent } from './base/day-show/day-show.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { OrderByPipe } from './pipes/order-by.pipe';
     TeamShowComponent,
     DefaultImageDirective,
     OptionalImageContainerComponent,
-    OrderByPipe
+    OrderByPipe,
+    DayShowComponent
   ],
   imports: [
     BrowserModule,

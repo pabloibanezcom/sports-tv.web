@@ -1,9 +1,9 @@
-import { Event } from './event';
+import { Day } from './day';
 
 export class Competition {
     key: string;
     name: string;
     order: number;
     country: string;
-    events: Array<Event>;
+    days: Array<Day>;
 }

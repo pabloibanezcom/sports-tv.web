@@ -1,0 +1,6 @@
+<div class="day-show">
+  <span [innerHtml]="day.label"></span>
+  <div class="list-group">
+      <st-box-event *ngFor="let event of day.events" [event]="event"></st-box-event>
+    </div>
+</div>
