@@ -9,13 +9,15 @@ import { Competition } from '../../models/competition';
 })
 export class BoxCompetitionComponent implements OnInit {
 
+  flagSrc: string;
+  logoSrc: string;
   @Input() competition: Competition;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  
+    this.flagSrc = '../../../assets/images/flags/' + this.competition.country + '.png';
+    this.logoSrc = '../../../assets/images/logos/competitions/' + this.competition.key + '.png';
+ }
 
 }
