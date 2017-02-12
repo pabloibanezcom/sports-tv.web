@@ -6,8 +6,11 @@
 */
 
 /**google font**/
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800);
 @import "./_variables.scss";
 @import "./_base.scss";
 @import "./_nav.scss";
+@import "./_margin_padding.scss";
+@import "./_buttons.scss";

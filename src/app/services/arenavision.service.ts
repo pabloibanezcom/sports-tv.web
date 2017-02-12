@@ -19,8 +19,6 @@ export class ArenavisionService {
 
   getEvents(): any {
     return this.httpService.get('events');
-    // return this.http.get(this.api_url + 'acestream/events')
-    //   .map((response: Response) => response.json());
   }
 
   getAcestremFromChannel(channel: string): any {
