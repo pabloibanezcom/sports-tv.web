@@ -2,7 +2,7 @@
   <div class="panel-heading" (click)="hidePanel = !hidePanel">
     <div class="left-compensation"></div>
     <st-optional-image-container class="flag" [conditional]="competition.country" [imgSrc]="flagSrc"></st-optional-image-container>
-    <h3 class="panel-title" [innerHtml]="competition.name"></h3>
+    <h3 class="panel-title" [ngClass]="{'title-no-logo': !competition.key}" [innerHtml]="competition.name"></h3>
     <st-optional-image-container class="logo" [conditional]="competition.key" [imgSrc]="logoSrc"></st-optional-image-container>
     <i class="fa fa-chevron-up" [ngClass]="{'fa-chevron-up': !hidePanel, 'fa-chevron-down': hidePanel}"></i>
   </div>

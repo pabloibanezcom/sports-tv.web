@@ -1,5 +1,7 @@
 <div class="box-event list-group-item">
-  <div *ngIf="!event.teams" class="list-group-item-heading" [innerHtml]="event.name">
+  <div class="event-header row" *ngIf="!event.teams" (click)="showChannels = !showChannels">
+    <div class="col-xs-12 no-teams" [innerHtml]="event.name">
+    </div>
   </div>
   <div class="event-header row" *ngIf="event.teams" (click)="showChannels = !showChannels">
     <div class="col-xs-5 team-show-container">

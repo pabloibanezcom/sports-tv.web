@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url: 'https://sports-tv-api.herokuapp.com/api/',
+  fb_app_id: '383333232024768'
 };

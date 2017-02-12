@@ -1,13 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { routing } from './app.routing';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FacebookService } from 'ng2-facebook-sdk';
 
+import { routing } from './app.routing';
+import { AuthGuard } from './guards/auth.guard';
 import { AppComponent } from './app.component';
 import { EventsComponent } from './views/events/events.component';
 
+import { AuthService } from './services/auth.service';
+import { HttpService } from './services/http.service';
 import { ArenavisionService } from './services/arenavision.service';
+
 import { BoxSportComponent } from './base/box-sport/box-sport.component';
 import { BoxCompetitionComponent } from './base/box-competition/box-competition.component';
 import { BoxEventComponent } from './base/box-event/box-event.component';
@@ -17,6 +22,7 @@ import { DefaultImageDirective } from './directives/default-image.directive';
 import { OptionalImageContainerComponent } from './base/optional-image-container/optional-image-container.component';
 import { OrderByPipe } from './pipes/order-by.pipe';
 import { DayShowComponent } from './base/day-show/day-show.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { DayShowComponent } from './base/day-show/day-show.component';
     DefaultImageDirective,
     OptionalImageContainerComponent,
     OrderByPipe,
-    DayShowComponent
+    DayShowComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { DayShowComponent } from './base/day-show/day-show.component';
     FormsModule,
     HttpModule
   ],
-  providers: [ArenavisionService],
+  providers: [AuthGuard, FacebookService, AuthService, HttpService, ArenavisionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
