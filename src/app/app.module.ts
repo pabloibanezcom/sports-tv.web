@@ -11,6 +11,7 @@ import { EventsComponent } from './views/events/events.component';
 
 import { AuthService } from './services/auth.service';
 import { HttpService } from './services/http.service';
+import { AlertService } from './services/alert.service';
 import { ArenavisionService } from './services/arenavision.service';
 
 import { BoxSportComponent } from './base/box-sport/box-sport.component';
@@ -45,7 +46,7 @@ import { LoginComponent } from './views/login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [AuthGuard, FacebookService, AuthService, HttpService, ArenavisionService],
+  providers: [AuthGuard, FacebookService, AuthService, HttpService, AlertService, ArenavisionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

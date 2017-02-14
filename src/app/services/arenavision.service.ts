@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
 import { environment } from '../../environments/environment';
@@ -12,7 +11,7 @@ export class ArenavisionService {
   private api_url: string;
   private arenavision_url: string;
 
-  constructor(private http: Http, private httpService: HttpService) {
+  constructor(private httpService: HttpService) {
     this.api_url = environment.api_url;
     this.arenavision_url = '';
   }
@@ -22,14 +21,14 @@ export class ArenavisionService {
   }
 
   getAcestremFromChannel(channel: string): any {
-    return this.http.get(this.api_url + 'acestream/' + channel)
-      .map((response: Response) => response.json());
+    return this.httpService.get('channel/' + channel);
   }
 
   goToChannel(channel: string): void {
     this.getAcestremFromChannel(channel)
       .subscribe(
-      data => this.openAcestream(data.acestream)
+      data => this.openAcestream(data.acestream),
+      error => this.afterError(error)
       );
   }
 
@@ -43,6 +42,10 @@ export class ArenavisionService {
       result.push(i + '');
     }
     return result;
+  }
+
+  afterError(error: any) {
+    this.httpService.afterError(error);
   }
 
 }

@@ -18,7 +18,8 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
     this.busy = this.arenavisionService.getEvents()
       .subscribe(
-        data => this.sports = data
+        data => this.sports = data,
+        error => this.arenavisionService.afterError(error)
       );
   }
 
