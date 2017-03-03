@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  api_url: 'https://sports-tv-api.herokuapp.com/api/',
-  fb_app_id: '383333232024768'
+  api_url: 'http://localhost:3000/api/',
+  fb_app_id: '406548429704898'
 };

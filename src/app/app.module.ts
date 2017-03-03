@@ -13,6 +13,8 @@ import { AuthService } from './services/auth.service';
 import { HttpService } from './services/http.service';
 import { AlertService } from './services/alert.service';
 import { ArenavisionService } from './services/arenavision.service';
+import { UsersService } from './services/users.service';
+
 
 import { BoxSportComponent } from './base/box-sport/box-sport.component';
 import { BoxCompetitionComponent } from './base/box-competition/box-competition.component';
@@ -24,6 +26,7 @@ import { OptionalImageContainerComponent } from './base/optional-image-container
 import { OrderByPipe } from './pipes/order-by.pipe';
 import { DayShowComponent } from './base/day-show/day-show.component';
 import { LoginComponent } from './views/login/login.component';
+import { UsersComponent } from './views/users/users.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { LoginComponent } from './views/login/login.component';
     OptionalImageContainerComponent,
     OrderByPipe,
     DayShowComponent,
-    LoginComponent
+    LoginComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { LoginComponent } from './views/login/login.component';
     FormsModule,
     HttpModule
   ],
-  providers: [AuthGuard, FacebookService, AuthService, HttpService, AlertService, ArenavisionService],
+  providers: [AuthGuard, FacebookService, AuthService, HttpService, AlertService, ArenavisionService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

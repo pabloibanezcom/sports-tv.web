@@ -1,0 +1,13 @@
+<div class="users">
+  <h1>Users</h1>
+  <p class="lead">Complete list of all users</p>
+  <div class="row">
+    <div class="col-lg-12 ">
+      <ul class="nav nav-tabs" *ngIf="sports">
+        <li *ngFor="let user of users">
+          {{user.name}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
